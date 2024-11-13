@@ -1,9 +1,9 @@
 import express from 'express';
 import { createShortUrl } from './controllers/userController';
 import { Router } from 'express';
-import urlRoute from './routes/urlRoute';
+const urlRoute = require('./routes/url.js');
 const app = express();
-const router = Router();
+
 app.use(express.json());
 app.use('/url', urlRoute);
 
